@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParkUserControl));
             panel1 = new Panel();
-            searchPlateNumber = new TextBox();
             addParkButton = new PictureBox();
+            searchPlateNumber = new TextBox();
             label2 = new Label();
             parkedListPanel = new FlowLayoutPanel();
             searchPlateButton = new PictureBox();
@@ -44,8 +45,8 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(searchPlateNumber);
             panel1.Controls.Add(addParkButton);
+            panel1.Controls.Add(searchPlateNumber);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(parkedListPanel);
             panel1.Controls.Add(searchPlateButton);
@@ -55,6 +56,18 @@
             panel1.Size = new Size(374, 709);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // addParkButton
+            // 
+            addParkButton.BackColor = Color.Transparent;
+            addParkButton.Cursor = Cursors.Hand;
+            addParkButton.Image = (Image)resources.GetObject("addParkButton.Image");
+            addParkButton.Location = new Point(119, 604);
+            addParkButton.Name = "addParkButton";
+            addParkButton.Size = new Size(107, 87);
+            addParkButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            addParkButton.TabIndex = 0;
+            addParkButton.TabStop = false;
             // 
             // searchPlateNumber
             // 
@@ -66,17 +79,7 @@
             searchPlateNumber.PlaceholderText = "Search Plate No..";
             searchPlateNumber.Size = new Size(236, 34);
             searchPlateNumber.TabIndex = 5;
-            // 
-            // addParkButton
-            // 
-            addParkButton.BackColor = Color.FromArgb(32, 32, 66);
-            addParkButton.Cursor = Cursors.Hand;
-            addParkButton.Location = new Point(125, 619);
-            addParkButton.Name = "addParkButton";
-            addParkButton.Size = new Size(104, 72);
-            addParkButton.TabIndex = 0;
-            addParkButton.TabStop = false;
-            addParkButton.Click += addParkButton_Click;
+            searchPlateNumber.TextChanged += searchPlateNumber_TextChanged;
             // 
             // label2
             // 
@@ -88,10 +91,11 @@
             // 
             // parkedListPanel
             // 
+            parkedListPanel.AutoScroll = true;
             parkedListPanel.BorderStyle = BorderStyle.FixedSingle;
-            parkedListPanel.Location = new Point(-1, 182);
+            parkedListPanel.Location = new Point(3, 182);
             parkedListPanel.Name = "parkedListPanel";
-            parkedListPanel.Size = new Size(369, 478);
+            parkedListPanel.Size = new Size(368, 480);
             parkedListPanel.TabIndex = 3;
             parkedListPanel.Paint += parkedListPanel_Paint;
             // 
@@ -154,5 +158,20 @@
         private Panel parkInDetailPanel;
         private TextBox searchPlateNumber;
         private Label label2;
+
+        public PictureBox GetAddParkButton()
+        {
+            return addParkButton;
+        }
+
+        public Panel GetParkedListPanel()
+        {
+            return parkedListPanel;
+        }
+
+        public Panel GetParkInDetailPanel()
+        {
+            return parkInDetailPanel;
+        }
     }
 }

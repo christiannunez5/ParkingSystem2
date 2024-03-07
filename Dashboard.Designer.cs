@@ -1,6 +1,6 @@
 ﻿namespace ParkingSystemGUI
 {
-    partial class Dashboard
+    public partial class Dashboard
     {
         /// <summary>
         ///  Required designer variable.
@@ -36,16 +36,19 @@
             logoBox1 = new PictureBox();
             dashboardUserControl1 = new DashboardUserControl();
             parkUserControl1 = new ParkUserControl();
+            searchBox = new PictureBox();
             sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)parkBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)homeBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)searchBox).BeginInit();
             SuspendLayout();
             // 
             // sidebarPanel
             // 
             sidebarPanel.BackColor = Color.FromArgb(32, 32, 66);
+            sidebarPanel.Controls.Add(searchBox);
             sidebarPanel.Controls.Add(pictureBox2);
             sidebarPanel.Controls.Add(parkBox);
             sidebarPanel.Controls.Add(homeBox);
@@ -82,7 +85,6 @@
             parkBox.SizeMode = PictureBoxSizeMode.StretchImage;
             parkBox.TabIndex = 2;
             parkBox.TabStop = false;
-            parkBox.Click += parkBox_Click;
             // 
             // homeBox
             // 
@@ -98,7 +100,6 @@
             homeBox.SizeMode = PictureBoxSizeMode.StretchImage;
             homeBox.TabIndex = 1;
             homeBox.TabStop = false;
-            homeBox.Click += homeBox_Click;
             // 
             // logoBox1
             // 
@@ -125,6 +126,21 @@
             parkUserControl1.Name = "parkUserControl1";
             parkUserControl1.Size = new Size(1412, 876);
             parkUserControl1.TabIndex = 4;
+            parkUserControl1.Load += ParkUserControl_Load;
+            // 
+            // searchBox
+            // 
+            searchBox.BorderStyle = BorderStyle.FixedSingle;
+            searchBox.Cursor = Cursors.Hand;
+            searchBox.Image = (Image)resources.GetObject("searchBox.Image");
+            searchBox.Location = new Point(0, 233);
+            searchBox.Margin = new Padding(3, 4, 3, 4);
+            searchBox.Name = "searchBox";
+            searchBox.Padding = new Padding(25);
+            searchBox.Size = new Size(79, 80);
+            searchBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            searchBox.TabIndex = 4;
+            searchBox.TabStop = false;
             // 
             // Dashboard
             // 
@@ -145,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)parkBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)homeBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)searchBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -166,6 +183,17 @@
             return parkBox;
         }
 
+        public ParkUserControl GetParkUserControl()
+        {
+            return parkUserControl1;
+        }
+
+        public DashboardUserControl GetDashboardUserControl()
+        {
+            return dashboardUserControl1;
+        }
+
         private ParkUserControl parkUserControl1;
+        private PictureBox searchBox;
     }
 }

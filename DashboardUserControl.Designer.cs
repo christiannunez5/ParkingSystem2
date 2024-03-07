@@ -77,6 +77,7 @@
             label14.TabIndex = 22;
             label14.Text = "PAYMENT MATRIX";
             label14.TextAlign = ContentAlignment.MiddleCenter;
+            label14.Click += label14_Click;
             // 
             // label13
             // 
@@ -217,6 +218,7 @@
             label1.Name = "label1";
             label1.Size = new Size(1076, 112);
             label1.TabIndex = 0;
+            label1.Text = "\r\n";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
@@ -261,5 +263,11 @@
         private Label label2;
         private Label label1;
         private Panel panel1;
+
+        public Label GetLabel1()
+        {
+            return label1;
+        }
+
     }
 }

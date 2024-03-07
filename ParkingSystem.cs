@@ -10,7 +10,7 @@ namespace ParkingSystemGUI
     public class ParkingSystem
     {
         public List <ParkingSystem> parkedCars = new List<ParkingSystem>();
-
+        
         private string plateNumber;
         private string vehicleType;
         private string brand;
@@ -51,6 +51,11 @@ namespace ParkingSystemGUI
         {
 
         }
+
+        public List<ParkingSystem> ParkedCars()
+        {
+            return parkedCars;
+        }
         public void AddCar(ParkingSystem car)
         {
             parkedCars.Add(car);
@@ -67,6 +72,11 @@ namespace ParkingSystemGUI
             set { plateNumber = value; }
         }
 
+        public Double ParkingFee
+        {
+            get { return parkingFee; }
+            set { parkingFee = value; }
+        }
 
         public string VehicleType
         {
@@ -98,33 +108,15 @@ namespace ParkingSystemGUI
             set { parkIn = value; }
         }
 
-
-        public void parkInDetails()
+        public TimeSpan Duration
         {
-
-            Console.WriteLine("\n==============PARKIN==============");
-            Console.WriteLine("\nPlate Number: " + PlateNumber);
-            Console.WriteLine("Vehicle Type: " + VehicleType);
-            Console.WriteLine("Brand: " + Brand);
-            Console.WriteLine("Park in: " + parkIn);
-            Console.WriteLine("Flag down: " + flagDown);
-            Console.WriteLine("\n==================================");
-
+            get { return duration; } 
         }
 
-        public void parkOutDetails()
+        public void ParkOutNow()
         {
+            this.ParkOut = DateTime.Now;
             calculateParkingFee();
-            Console.WriteLine("\n==============PARKOUT==============");
-            Console.WriteLine("\nPlate Number: " + PlateNumber);
-            Console.WriteLine("Vehicle Type: " + VehicleType);
-            Console.WriteLine("Brand: " + Brand);
-            Console.WriteLine("Flag down: " + flagDown);
-            Console.WriteLine("Park in: " + parkIn);
-            Console.WriteLine("Parkout: " + parkOut);
-            Console.WriteLine("Parking Time: {0} days, {1} hour/s, {2} minute/s, and {3} seconds", duration.Days, duration.Hours, duration.Minutes, duration.Seconds);
-            Console.WriteLine("Parking Fee: " + parkingFee);
-            Console.WriteLine("\n==================================");
         }
 
         public void calculateParkingFee()
@@ -135,8 +127,6 @@ namespace ParkingSystemGUI
             int hours = parkOut.Hour - parkIn.Hour;
             int minutes = parkOut.Minute - parkIn.Minute;
             int seconds = parkOut.Second - parkIn.Second;
-
-            Console.WriteLine(years);
 
             if (parkOut.Year >= parkIn.Year)
             {
@@ -169,8 +159,8 @@ namespace ParkingSystemGUI
                 minutes--;
             }
 
-            parkingFee = flagDown + ((days * 24 + hours) * addPerHour);
-            duration = new TimeSpan(days, hours, minutes, seconds);
+            this.parkingFee = flagDown + ((days * 24 + hours) * addPerHour);
+            this.duration = new TimeSpan(days, hours, minutes, seconds);
         }
 
     }

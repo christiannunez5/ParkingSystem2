@@ -19,3 +19,4 @@ C:\TEST\ParkingSystemGUI\obj\Debug\net8.0-windows\ParkingSystemGUI.Dashboard.res
 C:\TEST\ParkingSystemGUI\obj\Debug\net8.0-windows\ParkingSystemGUI.DashboardUserControl.resources
 C:\TEST\ParkingSystemGUI\obj\Debug\net8.0-windows\ParkingSystemGUI.ParkUserControl.resources
 C:\TEST\ParkingSystemGUI\obj\Debug\net8.0-windows\ParkingSystemGUI.Receipt.resources
+C:\TEST\ParkingSystemGUI\obj\Debug\net8.0-windows\ParkingSystemGUI.sourcelink.json

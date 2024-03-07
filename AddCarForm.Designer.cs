@@ -63,8 +63,8 @@
             // plateNumberInput
             // 
             plateNumberInput.BorderStyle = BorderStyle.None;
-            plateNumberInput.Font = new Font("Cascadia Mono SemiLight", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            plateNumberInput.Location = new Point(270, 48);
+            plateNumberInput.Font = new Font("Cascadia Mono ExtraLight", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            plateNumberInput.Location = new Point(270, 46);
             plateNumberInput.Multiline = true;
             plateNumberInput.Name = "plateNumberInput";
             plateNumberInput.PlaceholderText = "Plate Number...";
@@ -128,6 +128,7 @@
             addCarButton.TabIndex = 7;
             addCarButton.Text = "Park in";
             addCarButton.UseVisualStyleBackColor = false;
+            addCarButton.Click += addCarButton_Click;
             // 
             // label4
             // 
@@ -168,6 +169,7 @@
             label1.TabIndex = 1;
             label1.Text = "Plate Number";
             label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // AddCarForm
             // 

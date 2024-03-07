@@ -12,10 +12,10 @@ namespace ParkingSystemGUI
 {
     public partial class DashboardUserControl : UserControl
     {
+        ParkingSystem parkedCars = new ParkingSystem();
         public DashboardUserControl()
         {
             InitializeComponent();
-            label1.Text = $"20 vehicles currently parked";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,6 +37,11 @@ namespace ParkingSystemGUI
                                                               panel1.ClientSize.Height - thickness));
                 }
             }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
