@@ -74,7 +74,7 @@ namespace ParkingSystemGUI
 
         public Double ParkingFee
         {
-            get { return parkingFee; }
+            get { return this.parkingFee; }
             set { parkingFee = value; }
         }
 

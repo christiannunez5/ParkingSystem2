@@ -30,25 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             sidebarPanel = new Panel();
+            historyBox = new PictureBox();
             pictureBox2 = new PictureBox();
             parkBox = new PictureBox();
             homeBox = new PictureBox();
             logoBox1 = new PictureBox();
             dashboardUserControl1 = new DashboardUserControl();
             parkUserControl1 = new ParkUserControl();
-            searchBox = new PictureBox();
+            parkedHistoryUserControl1 = new ParkedHistoryUserControl();
             sidebarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)historyBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)parkBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)homeBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)searchBox).BeginInit();
             SuspendLayout();
             // 
             // sidebarPanel
             // 
             sidebarPanel.BackColor = Color.FromArgb(32, 32, 66);
-            sidebarPanel.Controls.Add(searchBox);
+            sidebarPanel.Controls.Add(historyBox);
             sidebarPanel.Controls.Add(pictureBox2);
             sidebarPanel.Controls.Add(parkBox);
             sidebarPanel.Controls.Add(homeBox);
@@ -58,6 +59,21 @@
             sidebarPanel.Name = "sidebarPanel";
             sidebarPanel.Size = new Size(78, 701);
             sidebarPanel.TabIndex = 2;
+            sidebarPanel.Paint += sidebarPanel_Paint;
+            // 
+            // historyBox
+            // 
+            historyBox.BorderStyle = BorderStyle.FixedSingle;
+            historyBox.Cursor = Cursors.Hand;
+            historyBox.Image = (Image)resources.GetObject("historyBox.Image");
+            historyBox.Location = new Point(0, 233);
+            historyBox.Margin = new Padding(3, 4, 3, 4);
+            historyBox.Name = "historyBox";
+            historyBox.Padding = new Padding(25);
+            historyBox.Size = new Size(79, 80);
+            historyBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            historyBox.TabIndex = 4;
+            historyBox.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -128,40 +144,37 @@
             parkUserControl1.TabIndex = 4;
             parkUserControl1.Load += ParkUserControl_Load;
             // 
-            // searchBox
+            // parkedHistoryUserControl1
             // 
-            searchBox.BorderStyle = BorderStyle.FixedSingle;
-            searchBox.Cursor = Cursors.Hand;
-            searchBox.Image = (Image)resources.GetObject("searchBox.Image");
-            searchBox.Location = new Point(0, 233);
-            searchBox.Margin = new Padding(3, 4, 3, 4);
-            searchBox.Name = "searchBox";
-            searchBox.Padding = new Padding(25);
-            searchBox.Size = new Size(79, 80);
-            searchBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            searchBox.TabIndex = 4;
-            searchBox.TabStop = false;
+            parkedHistoryUserControl1.BackColor = Color.White;
+            parkedHistoryUserControl1.Location = new Point(76, -1);
+            parkedHistoryUserControl1.Name = "parkedHistoryUserControl1";
+            parkedHistoryUserControl1.Size = new Size(1412, 876);
+            parkedHistoryUserControl1.TabIndex = 5;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 699);
+            Controls.Add(parkedHistoryUserControl1);
             Controls.Add(parkUserControl1);
             Controls.Add(dashboardUserControl1);
             Controls.Add(sidebarPanel);
             Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             sidebarPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)historyBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)parkBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)homeBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)searchBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -183,6 +196,11 @@
             return parkBox;
         }
 
+        public PictureBox GetHistoryBox()
+        {
+            return historyBox;
+        }
+
         public ParkUserControl GetParkUserControl()
         {
             return parkUserControl1;
@@ -193,7 +211,13 @@
             return dashboardUserControl1;
         }
 
+        public ParkedHistoryUserControl GetParkedHistoryUserControl()
+        {
+            return parkedHistoryUserControl1;
+        }
+
         private ParkUserControl parkUserControl1;
-        private PictureBox searchBox;
+        private PictureBox historyBox;
+        private ParkedHistoryUserControl parkedHistoryUserControl1;
     }
 }

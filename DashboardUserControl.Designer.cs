@@ -50,6 +50,7 @@
             // 
             // vehicleDataPanel
             // 
+            vehicleDataPanel.BackColor = Color.White;
             vehicleDataPanel.Controls.Add(label14);
             vehicleDataPanel.Controls.Add(label13);
             vehicleDataPanel.Controls.Add(label12);
@@ -214,6 +215,7 @@
             // label1
             // 
             label1.Font = new Font("Cascadia Mono", 34.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(39, 46);
             label1.Name = "label1";
             label1.Size = new Size(1076, 112);
@@ -224,6 +226,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-20, -20);

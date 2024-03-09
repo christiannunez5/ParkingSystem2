@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\TEST\\ParkingSystemGUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|c:\\test\\parkingsystemgui\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|c:\\test\\parkingsystemgui\\addcarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:addcarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,15 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Receipt.cs",
-              "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\Receipt.cs",
-              "RelativeDocumentMoniker": "Receipt.cs",
-              "ToolTip": "C:\\TEST\\ParkingSystemGUI\\Receipt.cs",
-              "RelativeToolTip": "Receipt.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAkwCAAAAAAAAAA",
+              "Title": "AddCarForm.cs [Design]",
+              "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\AddCarForm.cs",
+              "RelativeDocumentMoniker": "AddCarForm.cs",
+              "ToolTip": "C:\\TEST\\ParkingSystemGUI\\AddCarForm.cs [Design]",
+              "RelativeToolTip": "AddCarForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T11:06:26.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T14:29:50.411Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

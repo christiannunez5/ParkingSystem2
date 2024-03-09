@@ -15,9 +15,10 @@ namespace ParkingSystemGUI
             Dashboard dashboard = new Dashboard();
             AddCarForm addCarForm = new AddCarForm();
             ParkingSystem cars = new ParkingSystem();
+            ParkedHistory history = new ParkedHistory();
             DashboardUserControl dashboardUserControl = new DashboardUserControl();
             ParkUserControl parkUserControl = dashboard.GetParkUserControl();
-            dashboard.GetDashboardUserControl().GetLabel1().Text = $"{cars.ParkedCars().Count} vehicles currently login.";
+            dashboard.GetDashboardUserControl().GetLabel1().Text = $"{cars.ParkedCars().Count} vehicles currently parked.";
 
             //UTILITY FUNCTIONS
             Label CreateLabel(ParkingSystem car)
@@ -46,7 +47,6 @@ namespace ParkingSystemGUI
 
                 label.Click += (sender, e) =>
                 {
-
                     viewDetails(car);
                 };
 
@@ -64,23 +64,121 @@ namespace ParkingSystemGUI
                 return true;
             }
 
+            Label historyLabel(String str)
+            {
+                Label label = new Label();
+                label.Text = str;
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.Font = new Font("Cascadia Mono Light", 11, FontStyle.Regular);
+                label.Width = 269;
+                label.Height = 51;
+                label.Cursor = Cursors.Hand;
+                label.ForeColor = Color.White;
+                label.AutoSize = false;
+
+                label.MouseEnter += (sender, e) =>
+                {
+                    Label hoverLabel = (Label)sender;
+                    hoverLabel.BackColor = secondary;
+                };
+
+                label.MouseLeave += (sender, e) =>
+                {
+                    Label leaveLabel = (Label)sender;
+                    leaveLabel.BackColor = primary;
+                };
+
+                return label;
+            }
+
+            void renderHistoryComponents(List<ParkedHistory> histories)
+            {
+                Panel historypanel = dashboard.GetParkedHistoryUserControl().GetHistoryPanel();
+                Panel transactionPanel = dashboard.GetParkedHistoryUserControl().GetTransactionPanel(); 
+                if (histories.Count == 0)
+                {
+                    dashboard.GetParkedHistoryUserControl().GetErrorPanel().Visible = true;
+                    transactionPanel.Visible = false;
+                }
+
+                else
+                {
+                    transactionPanel.Visible = true;
+                    dashboard.GetParkedHistoryUserControl().GetErrorPanel().Visible = false;
+                    historypanel.Controls.Clear();
+
+                    foreach (ParkedHistory hist in histories)
+                    {
+                        int count = 0;
+                        Label label = new Label();
+                        label.Height = 51;
+                        label.Width = historypanel.Width;
+                        label.BackColor = Color.Black;
+                        label.Text = $"wtf {count}";
+                        count++;
+                        FlowLayoutPanel flowP = new FlowLayoutPanel();
+                        flowP.Width = historypanel.Width;
+                        flowP.Height = 51;
+                        flowP.BackColor = Color.FromArgb(32, 32, 66);
+                        flowP.Padding = new Padding(0);
+
+                        Label plateLabel = historyLabel(hist.ParkingFee());
+                        plateLabel.Margin = new Padding(0);
+
+                        Label parkInLabel = historyLabel(hist.ParkIn().ToString());
+                        parkInLabel.Margin = new Padding(0);
+
+                        Label parkOutLabel = historyLabel(hist.ParkOut().ToString());
+                        parkOutLabel.Margin = new Padding(0);
+
+                        Label feeLabel = historyLabel(hist.ParkingFee());
+                        feeLabel.Margin = new Padding(0);
+
+                        flowP.Controls.Add(plateLabel);
+                        flowP.Controls.Add(parkInLabel);
+                        flowP.Controls.Add(parkOutLabel);
+                        flowP.Controls.Add(feeLabel);
+
+                        historypanel.Controls.Add(flowP);
+
+                    }
+
+                }
+                
+               
+
+            }
 
             //DASHBOARD CONTROLLER
             dashboard.GetHomePictureBox().Click += (sender, e) =>
             {
                 dashboard.GetDashboardUserControl().Visible = true;
-                dashboard.GetDashboardUserControl().GetLabel1().Text = $"{cars.ParkedCars().Count} vehicles currently login.";
                 dashboard.GetParkUserControl().Visible = false;
+                dashboard.GetParkedHistoryUserControl().Visible = false;
+                dashboard.GetDashboardUserControl().GetLabel1().Text = $"{cars.ParkedCars().Count} vehicles currently parked.";
                 dashboard.GetHomePictureBox().BackColor = secondary;
                 dashboard.GetParkBoxPictureBox().BackColor = primary;
+                dashboard.GetHistoryBox().BackColor = primary;
             };
 
             dashboard.GetParkBoxPictureBox().Click += (sender, e) =>
             {
                 dashboard.GetDashboardUserControl().Visible = false;
                 dashboard.GetParkUserControl().Visible = true;
+                dashboard.GetParkedHistoryUserControl().Visible = false;
                 dashboard.GetHomePictureBox().BackColor = primary;
+                dashboard.GetHistoryBox().BackColor = primary;
                 dashboard.GetParkBoxPictureBox().BackColor = secondary;
+            };
+
+            dashboard.GetHistoryBox().Click += (sender, e) =>
+            {
+                dashboard.GetParkedHistoryUserControl().Visible = true;
+                dashboard.GetDashboardUserControl().Visible = false;
+                dashboard.GetParkUserControl().Visible = false;
+                dashboard.GetHomePictureBox().BackColor = primary;
+                dashboard.GetParkBoxPictureBox().BackColor = primary;
+                dashboard.GetHistoryBox().BackColor = secondary;
             };
 
             //PARKUSERCONTROL CONTROLLER
@@ -251,9 +349,12 @@ namespace ParkingSystemGUI
                         receipt.Show();
                         receipt.GetBackButton().Click += (sender, e) =>
                         {
+                            ParkedHistory parked = new ParkedHistory(car.PlateNumber, car.ParkIn, car.ParkOut, car.ParkingFee);
+                            history.GetParkedHistories().Add(parked);
                             receipt.Close();
                             cars.ParkedCars().Remove(car);
                             renderComponents(cars.ParkedCars());
+                            renderHistoryComponents(history.GetParkedHistories());
                             parkUserControl.GetParkInDetailPanel().Controls.Clear();
                         };
                         break;
