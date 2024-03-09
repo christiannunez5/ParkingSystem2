@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParkingSystemGUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0925de5e4bf267eaffc53c249de43eae001c5529")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49f650714194a2f6313e1a0c725eacd5f69bd0c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParkingSystemGUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParkingSystemGUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

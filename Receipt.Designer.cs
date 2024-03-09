@@ -249,6 +249,7 @@
             // backButton
             // 
             backButton.BackColor = Color.FromArgb(102, 0, 0);
+            backButton.Cursor = Cursors.Hand;
             backButton.Font = new Font("Cascadia Mono ExtraLight", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             backButton.ForeColor = Color.White;
             backButton.Location = new Point(661, 599);
