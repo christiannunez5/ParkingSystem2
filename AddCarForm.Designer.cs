@@ -86,7 +86,7 @@
             backButton.Cursor = Cursors.Hand;
             backButton.Font = new Font("Cascadia Mono", 13.8F);
             backButton.ForeColor = Color.White;
-            backButton.Location = new Point(356, 288);
+            backButton.Location = new Point(355, 279);
             backButton.Name = "backButton";
             backButton.Size = new Size(212, 50);
             backButton.TabIndex = 11;
@@ -122,7 +122,7 @@
             addCarButton.Cursor = Cursors.Hand;
             addCarButton.Font = new Font("Cascadia Mono", 13.8F);
             addCarButton.ForeColor = Color.White;
-            addCarButton.Location = new Point(585, 288);
+            addCarButton.Location = new Point(585, 279);
             addCarButton.Name = "addCarButton";
             addCarButton.Size = new Size(212, 50);
             addCarButton.TabIndex = 7;
@@ -163,9 +163,9 @@
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Cascadia Mono", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(31, 41);
+            label1.Location = new Point(31, 42);
             label1.Name = "label1";
-            label1.Size = new Size(210, 48);
+            label1.Size = new Size(210, 47);
             label1.TabIndex = 1;
             label1.Text = "Plate Number";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -176,10 +176,13 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.Disable;
-            BackColor = Color.White;
+            BackColor = Color.LightGray;
             ClientSize = new Size(920, 522);
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(255, 128, 128);
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "AddCarForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddCarForm";

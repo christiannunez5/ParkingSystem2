@@ -22,6 +22,7 @@ namespace ParkingSystemGUI
             vScrollBar.SmallChange = 10;
             vScrollBar.LargeChange = 30;
             vScrollBar.Scroll += (sender, e) => parkedListPanel.VerticalScroll.Value = vScrollBar.Value;
+
         }
 
 
@@ -76,7 +77,17 @@ namespace ParkingSystemGUI
 
         private void parkInDetailPanel_Paint(object sender, PaintEventArgs e)
         {
-            if (parkInDetailPanel.BorderStyle == BorderStyle.FixedSingle)
+
+        }
+
+        private void searchPlateNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zeroParkPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (zeroParkPanel.BorderStyle == BorderStyle.FixedSingle)
             {
                 int thickness = 3;//it's up to you
                 int halfThickness = thickness / 2;
@@ -84,13 +95,27 @@ namespace ParkingSystemGUI
                 {
                     e.Graphics.DrawRectangle(p, new Rectangle(halfThickness,
                                                               halfThickness,
-                                                              parkInDetailPanel.ClientSize.Width - thickness,
-                                                              parkInDetailPanel.ClientSize.Height - thickness));
+                                                              zeroParkPanel.ClientSize.Width - thickness,
+                                                              zeroParkPanel.ClientSize.Height - thickness));
                 }
             }
         }
 
-        private void searchPlateNumber_TextChanged(object sender, EventArgs e)
+        private void closeViewDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void addParkButton_Click(object sender, EventArgs e)
         {
 
         }

@@ -36,8 +36,8 @@
             historyPanel = new FlowLayoutPanel();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             errorPanel.SuspendLayout();
             transactionPanel.SuspendLayout();
@@ -92,8 +92,8 @@
             transactionPanel.Controls.Add(historyPanel);
             transactionPanel.Controls.Add(label5);
             transactionPanel.Controls.Add(label4);
-            transactionPanel.Controls.Add(label3);
             transactionPanel.Controls.Add(label2);
+            transactionPanel.Controls.Add(label3);
             transactionPanel.Location = new Point(27, 211);
             transactionPanel.Name = "transactionPanel";
             transactionPanel.Size = new Size(1076, 416);
@@ -103,6 +103,7 @@
             // 
             historyPanel.AutoScroll = true;
             historyPanel.Location = new Point(0, 70);
+            historyPanel.Margin = new Padding(0);
             historyPanel.Name = "historyPanel";
             historyPanel.Size = new Size(1076, 346);
             historyPanel.TabIndex = 4;
@@ -135,20 +136,6 @@
             label4.Text = "Park out";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
-            // 
-            label3.BackColor = Color.FromArgb(32, 32, 64);
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Cascadia Mono SemiLight", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(269, 1);
-            label3.Margin = new Padding(0);
-            label3.Name = "label3";
-            label3.Size = new Size(269, 51);
-            label3.TabIndex = 1;
-            label3.Text = "Park in";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             label2.BackColor = Color.FromArgb(32, 32, 64);
@@ -162,6 +149,20 @@
             label2.TabIndex = 0;
             label2.Text = "Plate Number";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.FromArgb(32, 32, 64);
+            label3.BorderStyle = BorderStyle.FixedSingle;
+            label3.Font = new Font("Cascadia Mono SemiLight", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(269, 1);
+            label3.Margin = new Padding(0);
+            label3.Name = "label3";
+            label3.Size = new Size(269, 51);
+            label3.TabIndex = 1;
+            label3.Text = "Park in";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ParkedHistoryUserControl
             // 

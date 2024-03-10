@@ -1,4 +1,6 @@
-﻿namespace ParkingSystemGUI
+﻿using System.Windows.Forms;
+
+namespace ParkingSystemGUI
 {
     public partial class Dashboard
     {
@@ -31,7 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             sidebarPanel = new Panel();
             historyBox = new PictureBox();
-            pictureBox2 = new PictureBox();
+            logOutBox = new PictureBox();
             parkBox = new PictureBox();
             homeBox = new PictureBox();
             logoBox1 = new PictureBox();
@@ -40,7 +42,7 @@
             parkedHistoryUserControl1 = new ParkedHistoryUserControl();
             sidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)historyBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logOutBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)parkBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)homeBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoBox1).BeginInit();
@@ -50,7 +52,7 @@
             // 
             sidebarPanel.BackColor = Color.FromArgb(32, 32, 66);
             sidebarPanel.Controls.Add(historyBox);
-            sidebarPanel.Controls.Add(pictureBox2);
+            sidebarPanel.Controls.Add(logOutBox);
             sidebarPanel.Controls.Add(parkBox);
             sidebarPanel.Controls.Add(homeBox);
             sidebarPanel.Controls.Add(logoBox1);
@@ -75,18 +77,19 @@
             historyBox.TabIndex = 4;
             historyBox.TabStop = false;
             // 
-            // pictureBox2
+            // logOutBox
             // 
-            pictureBox2.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(-1, 621);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Padding = new Padding(25);
-            pictureBox2.Size = new Size(79, 80);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
+            logOutBox.BorderStyle = BorderStyle.FixedSingle;
+            logOutBox.Cursor = Cursors.Hand;
+            logOutBox.Image = (Image)resources.GetObject("logOutBox.Image");
+            logOutBox.Location = new Point(-1, 621);
+            logOutBox.Margin = new Padding(3, 4, 3, 4);
+            logOutBox.Name = "logOutBox";
+            logOutBox.Padding = new Padding(25);
+            logOutBox.Size = new Size(79, 80);
+            logOutBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            logOutBox.TabIndex = 3;
+            logOutBox.TabStop = false;
             // 
             // parkBox
             // 
@@ -123,7 +126,6 @@
             logoBox1.Location = new Point(3, -1);
             logoBox1.Margin = new Padding(3, 4, 3, 4);
             logoBox1.Name = "logoBox1";
-            logoBox1.Padding = new Padding(25);
             logoBox1.Size = new Size(76, 81);
             logoBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             logoBox1.TabIndex = 0;
@@ -131,6 +133,7 @@
             // 
             // dashboardUserControl1
             // 
+            dashboardUserControl1.BackColor = Color.White;
             dashboardUserControl1.Location = new Point(77, -1);
             dashboardUserControl1.Name = "dashboardUserControl1";
             dashboardUserControl1.Size = new Size(1412, 876);
@@ -149,8 +152,10 @@
             parkedHistoryUserControl1.BackColor = Color.White;
             parkedHistoryUserControl1.Location = new Point(76, -1);
             parkedHistoryUserControl1.Name = "parkedHistoryUserControl1";
+            parkedHistoryUserControl1.Padding = new Padding(5);
             parkedHistoryUserControl1.Size = new Size(1412, 876);
             parkedHistoryUserControl1.TabIndex = 5;
+            parkedHistoryUserControl1.Load += parkedHistoryUserControl1_Load;
             // 
             // Dashboard
             // 
@@ -162,6 +167,7 @@
             Controls.Add(dashboardUserControl1);
             Controls.Add(sidebarPanel);
             Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -171,7 +177,7 @@
             Load += Form1_Load;
             sidebarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)historyBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logOutBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)parkBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)homeBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoBox1).EndInit();
@@ -183,7 +189,7 @@
         private PictureBox parkBox;
         private PictureBox homeBox;
         private PictureBox logoBox1;
-        private PictureBox pictureBox2;
+        private PictureBox logOutBox;
         private DashboardUserControl dashboardUserControl1;
 
         public PictureBox GetHomePictureBox()
@@ -214,6 +220,11 @@
         public ParkedHistoryUserControl GetParkedHistoryUserControl()
         {
             return parkedHistoryUserControl1;
+        }
+
+        public PictureBox GetLogOutBox()
+        {
+            return logOutBox;
         }
 
         private ParkUserControl parkUserControl1;
