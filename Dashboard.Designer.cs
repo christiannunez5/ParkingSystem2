@@ -136,14 +136,14 @@ namespace ParkingSystemGUI
             dashboardUserControl1.BackColor = Color.White;
             dashboardUserControl1.Location = new Point(77, -1);
             dashboardUserControl1.Name = "dashboardUserControl1";
-            dashboardUserControl1.Size = new Size(1412, 876);
+            dashboardUserControl1.Size = new Size(1125, 702);
             dashboardUserControl1.TabIndex = 3;
             // 
             // parkUserControl1
             // 
-            parkUserControl1.Location = new Point(77, 0);
+            parkUserControl1.Location = new Point(76, 0);
             parkUserControl1.Name = "parkUserControl1";
-            parkUserControl1.Size = new Size(1412, 876);
+            parkUserControl1.Size = new Size(1126, 701);
             parkUserControl1.TabIndex = 4;
             parkUserControl1.Load += ParkUserControl_Load;
             // 
@@ -153,7 +153,7 @@ namespace ParkingSystemGUI
             parkedHistoryUserControl1.Location = new Point(76, 0);
             parkedHistoryUserControl1.Name = "parkedHistoryUserControl1";
             parkedHistoryUserControl1.Padding = new Padding(5);
-            parkedHistoryUserControl1.Size = new Size(1412, 876);
+            parkedHistoryUserControl1.Size = new Size(1126, 701);
             parkedHistoryUserControl1.TabIndex = 5;
             parkedHistoryUserControl1.Load += parkedHistoryUserControl1_Load;
             // 
@@ -162,10 +162,10 @@ namespace ParkingSystemGUI
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 699);
+            Controls.Add(sidebarPanel);
             Controls.Add(parkedHistoryUserControl1);
             Controls.Add(parkUserControl1);
             Controls.Add(dashboardUserControl1);
-            Controls.Add(sidebarPanel);
             Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
