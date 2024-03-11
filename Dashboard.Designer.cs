@@ -150,7 +150,7 @@ namespace ParkingSystemGUI
             // parkedHistoryUserControl1
             // 
             parkedHistoryUserControl1.BackColor = Color.White;
-            parkedHistoryUserControl1.Location = new Point(76, -1);
+            parkedHistoryUserControl1.Location = new Point(76, 0);
             parkedHistoryUserControl1.Name = "parkedHistoryUserControl1";
             parkedHistoryUserControl1.Padding = new Padding(5);
             parkedHistoryUserControl1.Size = new Size(1412, 876);
