@@ -36,11 +36,12 @@
             panel2 = new Panel();
             usernameInput = new TextBox();
             pictureBox2 = new PictureBox();
-            button1 = new Button();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -120,19 +121,18 @@
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
-            // button1
+            // pictureBox3
             // 
-            button1.BackColor = Color.FromArgb(102, 0, 0);
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(1190, 723);
-            button1.Name = "button1";
-            button1.Size = new Size(225, 57);
-            button1.TabIndex = 2;
-            button1.Text = "Exit";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            pictureBox3.BackColor = Color.FromArgb(102, 0, 0);
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1365, 748);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Padding = new Padding(15);
+            pictureBox3.Size = new Size(72, 62);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // LoginForm
             // 
@@ -140,7 +140,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 66);
             ClientSize = new Size(1437, 807);
-            Controls.Add(button1);
+            Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(panel1);
             Font = new Font("Cascadia Mono", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -155,6 +155,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -184,16 +185,6 @@
             return passwordInput;
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-
-
-        #endregion
-
-        private Button button1;
+        private PictureBox pictureBox3;
     }
 }

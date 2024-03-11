@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParkUserControl));
             panel1 = new Panel();
+            addParkButton = new PictureBox();
             endSearchBox = new PictureBox();
             zeroParkPanel = new Panel();
-            addParkButton = new PictureBox();
             messageLabel = new Label();
             searchPlateNumber = new TextBox();
             label2 = new Label();
@@ -41,9 +41,9 @@
             label1 = new Label();
             parkInDetailPanel = new Panel();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)addParkButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)endSearchBox).BeginInit();
             zeroParkPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)addParkButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)searchPlateButton).BeginInit();
             SuspendLayout();
             // 
@@ -64,10 +64,23 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // addParkButton
+            // 
+            addParkButton.BackColor = Color.Transparent;
+            addParkButton.Cursor = Cursors.Hand;
+            addParkButton.Image = (Image)resources.GetObject("addParkButton.Image");
+            addParkButton.Location = new Point(138, 636);
+            addParkButton.Name = "addParkButton";
+            addParkButton.Size = new Size(85, 73);
+            addParkButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            addParkButton.TabIndex = 0;
+            addParkButton.TabStop = false;
+            addParkButton.Click += addParkButton_Click;
+            // 
             // endSearchBox
             // 
             endSearchBox.Image = (Image)resources.GetObject("endSearchBox.Image");
-            endSearchBox.Location = new Point(245, 118);
+            endSearchBox.Location = new Point(257, 120);
             endSearchBox.Name = "endSearchBox";
             endSearchBox.Size = new Size(32, 34);
             endSearchBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -84,19 +97,6 @@
             zeroParkPanel.Size = new Size(378, 495);
             zeroParkPanel.TabIndex = 6;
             zeroParkPanel.Paint += zeroParkPanel_Paint;
-            // 
-            // addParkButton
-            // 
-            addParkButton.BackColor = Color.Transparent;
-            addParkButton.Cursor = Cursors.Hand;
-            addParkButton.Image = (Image)resources.GetObject("addParkButton.Image");
-            addParkButton.Location = new Point(157, 654);
-            addParkButton.Name = "addParkButton";
-            addParkButton.Size = new Size(61, 55);
-            addParkButton.SizeMode = PictureBoxSizeMode.StretchImage;
-            addParkButton.TabIndex = 0;
-            addParkButton.TabStop = false;
-            addParkButton.Click += addParkButton_Click;
             // 
             // messageLabel
             // 
@@ -117,7 +117,7 @@
             searchPlateNumber.Multiline = true;
             searchPlateNumber.Name = "searchPlateNumber";
             searchPlateNumber.PlaceholderText = "Search Plate No..";
-            searchPlateNumber.Size = new Size(236, 34);
+            searchPlateNumber.Size = new Size(224, 34);
             searchPlateNumber.TabIndex = 5;
             searchPlateNumber.TextChanged += searchPlateNumber_TextChanged;
             // 
@@ -126,7 +126,7 @@
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Location = new Point(25, 112);
             label2.Name = "label2";
-            label2.Size = new Size(257, 47);
+            label2.Size = new Size(271, 47);
             label2.TabIndex = 4;
             // 
             // parkedListPanel
@@ -141,12 +141,11 @@
             // 
             // searchPlateButton
             // 
-            searchPlateButton.BackColor = Color.FromArgb(32, 32, 66);
+            searchPlateButton.BackColor = Color.Transparent;
             searchPlateButton.Cursor = Cursors.Hand;
             searchPlateButton.Image = (Image)resources.GetObject("searchPlateButton.Image");
-            searchPlateButton.Location = new Point(288, 112);
+            searchPlateButton.Location = new Point(302, 112);
             searchPlateButton.Name = "searchPlateButton";
-            searchPlateButton.Padding = new Padding(5);
             searchPlateButton.Size = new Size(57, 47);
             searchPlateButton.SizeMode = PictureBoxSizeMode.StretchImage;
             searchPlateButton.TabIndex = 2;
@@ -186,9 +185,9 @@
             Size = new Size(1130, 701);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)addParkButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)endSearchBox).EndInit();
             zeroParkPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)addParkButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)searchPlateButton).EndInit();
             ResumeLayout(false);
         }
