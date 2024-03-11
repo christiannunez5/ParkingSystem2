@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\TEST\\ParkingSystemGUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|c:\\test\\parkingsystemgui\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\dashboardusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:dashboardusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\parkedhistoryusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:parkedhistoryusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\parkusercontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:parkusercontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|c:\\test\\parkingsystemgui\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,14 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\parkusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:parkusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\parkedhistoryusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:parkedhistoryusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\dashboardusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|solutionrelative:dashboardusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55E14DED-CC86-49C0-8BAA-6FBE93F46995}|ParkingSystemGUI.csproj|C:\\TEST\\ParkingSystemGUI\\parkingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,42 +62,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Dashboard.Designer.cs",
               "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\Dashboard.Designer.cs",
               "RelativeDocumentMoniker": "Dashboard.Designer.cs",
               "ToolTip": "C:\\TEST\\ParkingSystemGUI\\Dashboard.Designer.cs",
               "RelativeToolTip": "Dashboard.Designer.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAYwJYAAAAPAAAA",
+              "ViewState": "AQIAAKIAAAAAAAAAAAArwK0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T05:40:24.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "DashboardUserControl.cs [Design]",
               "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\DashboardUserControl.cs",
               "RelativeDocumentMoniker": "DashboardUserControl.cs",
               "ToolTip": "C:\\TEST\\ParkingSystemGUI\\DashboardUserControl.cs [Design]",
               "RelativeToolTip": "DashboardUserControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T13:51:35.994Z"
+              "WhenOpened": "2024-03-10T13:51:35.994Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "ParkedHistoryUserControl.cs [Design]",
               "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\ParkedHistoryUserControl.cs",
               "RelativeDocumentMoniker": "ParkedHistoryUserControl.cs",
               "ToolTip": "C:\\TEST\\ParkingSystemGUI\\ParkedHistoryUserControl.cs [Design]",
               "RelativeToolTip": "ParkedHistoryUserControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T13:51:32.695Z"
+              "WhenOpened": "2024-03-10T13:51:32.695Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ParkUserControl.cs",
               "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\ParkUserControl.cs",
               "RelativeDocumentMoniker": "ParkUserControl.cs",
@@ -144,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ParkUserControl.Designer.cs",
               "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\ParkUserControl.Designer.cs",
               "RelativeDocumentMoniker": "ParkUserControl.Designer.cs",
@@ -152,8 +154,7 @@
               "RelativeToolTip": "ParkUserControl.Designer.cs",
               "ViewState": "AQIAAH8AAAAAAAAAAAAIwIgAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T10:22:35.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-10T10:22:35.543Z"
             },
             {
               "$type": "Document",
@@ -169,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ParkUserControl.cs [Design]",
               "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\ParkUserControl.cs",
               "RelativeDocumentMoniker": "ParkUserControl.cs",
@@ -180,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\TEST\\ParkingSystemGUI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

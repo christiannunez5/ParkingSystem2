@@ -66,7 +66,7 @@
             vehicleDataPanel.Controls.Add(label2);
             vehicleDataPanel.Location = new Point(3, 162);
             vehicleDataPanel.Name = "vehicleDataPanel";
-            vehicleDataPanel.Size = new Size(1154, 495);
+            vehicleDataPanel.Size = new Size(1126, 495);
             vehicleDataPanel.TabIndex = 2;
             // 
             // label14
@@ -231,7 +231,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-20, -20);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1174, 192);
+            panel1.Size = new Size(1146, 192);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
@@ -243,7 +243,7 @@
             Controls.Add(panel1);
             Controls.Add(vehicleDataPanel);
             Name = "DashboardUserControl";
-            Size = new Size(1130, 701);
+            Size = new Size(1126, 702);
             vehicleDataPanel.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ResumeLayout(false);

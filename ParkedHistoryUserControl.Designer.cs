@@ -173,7 +173,7 @@
             Controls.Add(panel1);
             Controls.Add(errorPanel);
             Name = "ParkedHistoryUserControl";
-            Size = new Size(1130, 701);
+            Size = new Size(1127, 702);
             panel1.ResumeLayout(false);
             errorPanel.ResumeLayout(false);
             transactionPanel.ResumeLayout(false);

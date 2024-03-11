@@ -163,9 +163,9 @@ namespace ParkingSystemGUI
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 699);
             Controls.Add(sidebarPanel);
-            Controls.Add(parkedHistoryUserControl1);
             Controls.Add(parkUserControl1);
             Controls.Add(dashboardUserControl1);
+            Controls.Add(parkedHistoryUserControl1);
             Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
