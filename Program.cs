@@ -20,7 +20,6 @@ namespace ParkingSystemGUI
             ApplicationConfiguration.Initialize();
             LoginForm loginForm = new LoginForm();
             Dashboard dashboard = new Dashboard();
-            AddCarForm addCarForm = new AddCarForm();
             ParkingSystem cars = new ParkingSystem();
             ParkedHistory history = new ParkedHistory();
             DashboardUserControl dashboardUserControl = new DashboardUserControl();
@@ -35,9 +34,10 @@ namespace ParkingSystemGUI
                 label.TextAlign = ContentAlignment.MiddleCenter;
                 label.Font = new Font("Cascadia Mono Light", 12, FontStyle.Regular);
                 label.BorderStyle = BorderStyle.FixedSingle;
-                label.Width = parkUserControl.GetParkedListPanel().Width - 9;
+                label.Width = parkUserControl.GetParkedListPanel().Width - 2;
                 label.Height = 50;
                 label.Cursor = Cursors.Hand;
+                label.Margin = new Padding(0);
                 label.AutoSize = false;
 
                 label.MouseEnter += (sender, e) =>
@@ -259,12 +259,41 @@ namespace ParkingSystemGUI
             //PARKUSERCONTROL CONTROLLER
             parkUserControl.GetAddParkButton().Click += (sender, e) =>
             {
-                if (addCarForm == null || addCarForm.IsDisposed)
-                {
-                    addCarForm = new AddCarForm(); // Create a new instance if it's not created yet or disposed
-                }
-
+                AddCarForm addCarForm = new AddCarForm();
                 addCarForm.Show();
+                //ADD CAR FORM CONTROLLER
+                addCarForm.GetAddCarButton().Click += (sender, e) =>
+                {
+                    string plateNumber = addCarForm.GetPlateNumber().Text;
+                    string vehicleType = addCarForm.GetVehicleType()?.SelectedItem?.ToString();
+                    string brand = addCarForm.GetBrand()?.SelectedItem?.ToString();
+
+                    if (string.IsNullOrEmpty(plateNumber) || string.IsNullOrEmpty(vehicleType) || string.IsNullOrEmpty(brand))
+                    {
+                        MessageBox.Show("All fields must be filled.");
+                    }
+
+                    else if (vehicleType == "Select Vehicle" && brand == "Select Brand")
+                    {
+                        MessageBox.Show("All fields must be filled.");
+                    }
+                    else if (!IsPlateNumberUnique(plateNumber))
+                    {
+                        MessageBox.Show("This vehicle is already parked. Plate number: " + plateNumber);
+                    }
+
+                    else
+                    {
+                        ParkingSystem car = new ParkingSystem(plateNumber, vehicleType, brand);
+                        cars.ParkedCars().Add(car);
+                        renderComponents(cars.ParkedCars());
+                        addCarForm.GetPlateNumber().Text = "";
+                        addCarForm.GetPlateNumber().PlaceholderText = "Enter plate number...";
+                        addCarForm.GetVehicleType().Text = "Select Vehicle";
+                        addCarForm.GetBrand().Text = "Select Brand";
+                        addCarForm.Close();
+                    }
+                };
 
             };
 
@@ -524,41 +553,7 @@ namespace ParkingSystemGUI
 
             }
 
-
-            //ADD CAR FORM CONTROLLER
-            addCarForm.GetAddCarButton().Click += (sender, e) =>
-            {
-                string plateNumber = addCarForm.GetPlateNumber().Text;
-                string vehicleType = addCarForm.GetVehicleType()?.SelectedItem?.ToString();
-                string brand = addCarForm.GetBrand()?.SelectedItem?.ToString();
-
-                if (string.IsNullOrEmpty(plateNumber) || string.IsNullOrEmpty(vehicleType) || string.IsNullOrEmpty(brand))
-                {
-                    MessageBox.Show("All fields must be filled.");
-                }
-
-                else if (vehicleType == "Select Vehicle" && brand == "Select Brand")
-                {
-                    MessageBox.Show("All fields must be filled.");
-                }
-                else if (!IsPlateNumberUnique(plateNumber))
-                {
-                    MessageBox.Show("This vehicle is already parked. Plate number: " + plateNumber);
-                }
-
-                else
-                {
-                    ParkingSystem car = new ParkingSystem(plateNumber, vehicleType, brand);
-                    cars.ParkedCars().Add(car);
-                    renderComponents(cars.ParkedCars());
-                    addCarForm.GetPlateNumber().Text = "";
-                    addCarForm.GetPlateNumber().PlaceholderText = "Plate Number...";
-                    addCarForm.GetVehicleType().Text = "Select Vehicle";
-                    addCarForm.GetBrand().Text = "Select Brand";
-                    addCarForm.Visible = false;
-                }
-            };
-
+           
             Application.Run(loginForm);
         }
 

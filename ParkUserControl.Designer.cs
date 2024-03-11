@@ -32,32 +32,33 @@
             panel1 = new Panel();
             addParkButton = new PictureBox();
             endSearchBox = new PictureBox();
-            zeroParkPanel = new Panel();
-            messageLabel = new Label();
             searchPlateNumber = new TextBox();
             label2 = new Label();
-            parkedListPanel = new FlowLayoutPanel();
             searchPlateButton = new PictureBox();
             label1 = new Label();
+            parkedListPanel = new FlowLayoutPanel();
+            zeroParkPanel = new Panel();
+            messageLabel = new Label();
             parkInDetailPanel = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)addParkButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)endSearchBox).BeginInit();
-            zeroParkPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)searchPlateButton).BeginInit();
+            zeroParkPanel.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(addParkButton);
             panel1.Controls.Add(endSearchBox);
-            panel1.Controls.Add(zeroParkPanel);
             panel1.Controls.Add(searchPlateNumber);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(parkedListPanel);
             panel1.Controls.Add(searchPlateButton);
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(parkedListPanel);
+            panel1.Controls.Add(zeroParkPanel);
             panel1.Location = new Point(-7, -8);
             panel1.Name = "panel1";
             panel1.Size = new Size(374, 709);
@@ -88,27 +89,6 @@
             endSearchBox.TabStop = false;
             endSearchBox.Visible = false;
             // 
-            // zeroParkPanel
-            // 
-            zeroParkPanel.BorderStyle = BorderStyle.FixedSingle;
-            zeroParkPanel.Controls.Add(messageLabel);
-            zeroParkPanel.Location = new Point(3, 182);
-            zeroParkPanel.Name = "zeroParkPanel";
-            zeroParkPanel.Size = new Size(378, 495);
-            zeroParkPanel.TabIndex = 6;
-            zeroParkPanel.Paint += zeroParkPanel_Paint;
-            // 
-            // messageLabel
-            // 
-            messageLabel.BackColor = Color.White;
-            messageLabel.Font = new Font("Cascadia Mono Light", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            messageLabel.Location = new Point(35, 119);
-            messageLabel.Name = "messageLabel";
-            messageLabel.Size = new Size(304, 205);
-            messageLabel.TabIndex = 0;
-            messageLabel.Text = "0 parked cars.";
-            messageLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // searchPlateNumber
             // 
             searchPlateNumber.BorderStyle = BorderStyle.None;
@@ -118,7 +98,7 @@
             searchPlateNumber.Name = "searchPlateNumber";
             searchPlateNumber.PlaceholderText = "Search Plate No..";
             searchPlateNumber.Size = new Size(224, 34);
-            searchPlateNumber.TabIndex = 5;
+            searchPlateNumber.TabIndex = 20;
             searchPlateNumber.TextChanged += searchPlateNumber_TextChanged;
             // 
             // label2
@@ -128,16 +108,6 @@
             label2.Name = "label2";
             label2.Size = new Size(271, 47);
             label2.TabIndex = 4;
-            // 
-            // parkedListPanel
-            // 
-            parkedListPanel.AutoScroll = true;
-            parkedListPanel.BorderStyle = BorderStyle.FixedSingle;
-            parkedListPanel.Location = new Point(3, 182);
-            parkedListPanel.Name = "parkedListPanel";
-            parkedListPanel.Size = new Size(378, 480);
-            parkedListPanel.TabIndex = 3;
-            parkedListPanel.Paint += parkedListPanel_Paint;
             // 
             // searchPlateButton
             // 
@@ -160,15 +130,47 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(391, 95);
+            label1.Size = new Size(374, 95);
             label1.TabIndex = 0;
             label1.Text = "PARKED";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // parkedListPanel
+            // 
+            parkedListPanel.AutoScroll = true;
+            parkedListPanel.BorderStyle = BorderStyle.FixedSingle;
+            parkedListPanel.Location = new Point(3, 182);
+            parkedListPanel.Name = "parkedListPanel";
+            parkedListPanel.Size = new Size(369, 480);
+            parkedListPanel.TabIndex = 3;
+            parkedListPanel.Paint += parkedListPanel_Paint;
+            // 
+            // zeroParkPanel
+            // 
+            zeroParkPanel.BorderStyle = BorderStyle.FixedSingle;
+            zeroParkPanel.Controls.Add(messageLabel);
+            zeroParkPanel.Location = new Point(3, 182);
+            zeroParkPanel.Margin = new Padding(0);
+            zeroParkPanel.Name = "zeroParkPanel";
+            zeroParkPanel.Size = new Size(369, 480);
+            zeroParkPanel.TabIndex = 6;
+            zeroParkPanel.Paint += zeroParkPanel_Paint;
+            // 
+            // messageLabel
+            // 
+            messageLabel.BackColor = Color.White;
+            messageLabel.Font = new Font("Cascadia Mono Light", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            messageLabel.Location = new Point(35, 119);
+            messageLabel.Name = "messageLabel";
+            messageLabel.Size = new Size(304, 205);
+            messageLabel.TabIndex = 0;
+            messageLabel.Text = "0 parked cars.";
+            messageLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // parkInDetailPanel
             // 
             parkInDetailPanel.BackColor = Color.White;
-            parkInDetailPanel.BorderStyle = BorderStyle.Fixed3D;
+            parkInDetailPanel.BorderStyle = BorderStyle.FixedSingle;
             parkInDetailPanel.Location = new Point(367, -5);
             parkInDetailPanel.Name = "parkInDetailPanel";
             parkInDetailPanel.Size = new Size(797, 723);
@@ -187,8 +189,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)addParkButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)endSearchBox).EndInit();
-            zeroParkPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)searchPlateButton).EndInit();
+            zeroParkPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 

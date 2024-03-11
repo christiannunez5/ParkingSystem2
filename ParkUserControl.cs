@@ -15,14 +15,6 @@ namespace ParkingSystemGUI
         public ParkUserControl()
         {
             InitializeComponent();
-            VScrollBar vScrollBar = new VScrollBar();
-            vScrollBar.Dock = DockStyle.Right;
-            vScrollBar.Minimum = 0;
-            vScrollBar.Maximum = parkedListPanel.VerticalScroll.Maximum;
-            vScrollBar.SmallChange = 10;
-            vScrollBar.LargeChange = 30;
-            vScrollBar.Scroll += (sender, e) => parkedListPanel.VerticalScroll.Value = vScrollBar.Value;
-
         }
 
 
@@ -55,18 +47,6 @@ namespace ParkingSystemGUI
 
         private void parkedListPanel_Paint(object sender, PaintEventArgs e)
         {
-            if (parkedListPanel.BorderStyle == BorderStyle.FixedSingle)
-            {
-                int thickness = 3;//it's up to you
-                int halfThickness = thickness / 2;
-                using (Pen p = new Pen(Color.Black, thickness))
-                {
-                    e.Graphics.DrawRectangle(p, new Rectangle(halfThickness,
-                                                              halfThickness,
-                                                              parkedListPanel.ClientSize.Width - thickness,
-                                                              parkedListPanel.ClientSize.Height - thickness));
-                }
-            }
         }
 
         private void searchPlateButton_Click(object sender, EventArgs e)
@@ -87,18 +67,6 @@ namespace ParkingSystemGUI
 
         private void zeroParkPanel_Paint(object sender, PaintEventArgs e)
         {
-            if (zeroParkPanel.BorderStyle == BorderStyle.FixedSingle)
-            {
-                int thickness = 3;//it's up to you
-                int halfThickness = thickness / 2;
-                using (Pen p = new Pen(Color.Black, thickness))
-                {
-                    e.Graphics.DrawRectangle(p, new Rectangle(halfThickness,
-                                                              halfThickness,
-                                                              zeroParkPanel.ClientSize.Width - thickness,
-                                                              zeroParkPanel.ClientSize.Height - thickness));
-                }
-            }
         }
 
         private void closeViewDetail_Click(object sender, EventArgs e)

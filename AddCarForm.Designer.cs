@@ -67,7 +67,7 @@
             plateNumberInput.Location = new Point(270, 46);
             plateNumberInput.Multiline = true;
             plateNumberInput.Name = "plateNumberInput";
-            plateNumberInput.PlaceholderText = "Plate Number...";
+            plateNumberInput.PlaceholderText = "Enter plate number..";
             plateNumberInput.Size = new Size(517, 34);
             plateNumberInput.TabIndex = 13;
             plateNumberInput.TextChanged += plateNumberInput_TextChanged;
@@ -176,11 +176,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.Disable;
-            BackColor = Color.LightGray;
+            BackColor = Color.White;
             ClientSize = new Size(920, 522);
+            ControlBox = false;
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(255, 128, 128);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AddCarForm";

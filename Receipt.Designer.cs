@@ -264,6 +264,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(926, 674);
+            ControlBox = false;
             Controls.Add(backButton);
             Controls.Add(feeData);
             Controls.Add(durationData);
@@ -282,6 +283,9 @@
             Controls.Add(plateNumberData);
             Controls.Add(label7);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Receipt";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Receipt";
